@@ -1,8 +1,7 @@
-<h1> This i s my fight song</h1>
+<h1> Home page </h1>
 
-<form action="">
-    <textarea cols="50" rows="10" name="fulltext">
-
-    </textarea>
-    <input type="submit" value="Count"/>
+<form action="{% url 'count' %}">
+    <textarea cols="50" rows="10" name="fulltext"> </textarea>
+    <br/>
+    <input type="submit" value="Count!" />
 </form>
