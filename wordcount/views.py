@@ -5,4 +5,7 @@ def home(request):
     return render(request, 'home.html')
 
 def count(request):
-    return render(request, 'count.html')
+    param = request.GET['fulltext']
+    wordcount = param.split()
+    print(wordcount)
+    return render(request, 'count.html', {'param': param, 'count': len(wordcount)})
