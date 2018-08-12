@@ -1,3 +1,9 @@
 <h1> You have {{ count }} in there </h1>
 
 {{ param }}
+
+<h1> all the cojnts </h1>
+{% for word, count in worddic %}
+<h1> {{ count}}</h1>
+<h1> {{ word }}</h1>
+{% endfor %}

@@ -7,5 +7,13 @@ def home(request):
 def count(request):
     param = request.GET['fulltext']
     wordcount = param.split()
-    print(wordcount)
-    return render(request, 'count.html', {'param': param, 'count': len(wordcount)})
+    
+    worddic = {}
+
+    for word in wordcount:
+        if word in worddic:
+            worddic[word] += 1
+        else:
+            worddic[word] = 1
+
+    return render(request, 'count.html', {'param': param, 'count': len(wordcount), "worddic": worddic.items()})
