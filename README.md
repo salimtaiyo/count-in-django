@@ -1,1 +1,1 @@
-<h1> Word Count app in django </h1>
+<h1> Word Count app in DJANGO </h1>
