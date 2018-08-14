@@ -17,3 +17,6 @@ def count(request):
             worddic[word] = 1
 
     return render(request, 'count.html', {'param': param, 'count': len(wordcount), "worddic": worddic.items()})
+
+def about(request):
+    return render(request, 'about.html')
